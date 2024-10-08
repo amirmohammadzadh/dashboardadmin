@@ -7,6 +7,7 @@ import {
   LockOpenOutlined,
   SecurityOutlined,
 } from "@mui/icons-material";
+import Header from "Components/Header";
 
 export default function Team() {
   const theme = useTheme();
@@ -83,6 +84,7 @@ export default function Team() {
             {access === "User" && (
               <LockOpenOutlined sx={{ color: "#fff" }} fontSize="small" />
             )}
+
             <Typography sx={{ fontSize: "13px", color: "#fff" }} varint="body1">
               {access}
             </Typography>
@@ -93,6 +95,7 @@ export default function Team() {
   ];
   return (
     <div>
+      <Header title={"TEAM"} subTitle={"Managing the Team Members"} />
       <Box sx={{ width: "99%", mx: "auto" }}>
         <DataGrid
           rows={rows}

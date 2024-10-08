@@ -221,10 +221,10 @@ const data = [
   },
 ];
 
-export default function LineCharts() {
+export default function LineCharts({ isDashbord = false }) {
   const theme = useTheme();
   return (
-    <Box sx={{ height: "75vh" }}>
+    <Box sx={{ height: isDashbord ? "280px" : "75vh" }}>
       {" "}
       <ResponsiveLine
         data={data}
@@ -354,7 +354,7 @@ export default function LineCharts() {
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: "Transportation",
+          legend: isDashbord ? null : "Transportation",
           legendOffset: 45,
           legendPosition: "middle",
           truncateTickAt: 0,
@@ -363,7 +363,7 @@ export default function LineCharts() {
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: "Count",
+          legend: isDashbord ? null : "Count",
           legendOffset: -50,
           legendPosition: "middle",
           truncateTickAt: 0,

@@ -9,6 +9,7 @@ import {
   TextField,
 } from "@mui/material";
 import { useForm } from "react-hook-form";
+import Header from "Components/Header";
 
 const data = [
   {
@@ -64,6 +65,7 @@ export default function Form() {
       noValidate
       autoComplete="off"
     >
+      <Header title={"CREATE USER"} subTitle={"Create a New User Profile"}/>
       <Stack sx={{ gap: 2 }} direction={"row"}>
         <TextField
           error={Boolean(errors.firstName)}
